@@ -1,11 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tarifas Unquehue`,
+    description: ``,
+    author: `@titiloxx`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+    resolve: `gatsby-plugin-s3`,
+    options: {
+      bucketName: "app-tarifas",
+        },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,6 +21,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+   `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,8 +34,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `TarifasUnque`,
+        short_name: `TarifasUnque`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/icon.png`
+      },
+     },
+     
+     `gatsby-plugin-offline`,
   ],
 }

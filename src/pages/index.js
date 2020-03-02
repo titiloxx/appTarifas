@@ -46,7 +46,7 @@ const IndexPage = () => {
       nombre:"Auto",
       setNombre:setAuto,
       cantidad:auto,
-      precio:400
+      precio:300
     },
 
     {
@@ -59,19 +59,19 @@ const IndexPage = () => {
       nombre:"Camper",
       setNombre:setCamper,
       cantidad:camper,
-      precio:600
+      precio:500
     },
     {
       nombre:"Mchico",
       setNombre:setMchico,
       cantidad:mchico,
-      precio:600
+      precio:550
     },
     {
       nombre:"Mgrand",
       setNombre:setMgrande,
       cantidad:mgrande,
-      precio:650
+      precio:600
     }
 
     ]
